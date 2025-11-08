@@ -10,5 +10,6 @@
       "path": "/api/cron/init-db",
       "schedule": "0 0 * * *"
     }
-  ]
+  ],
+  "microfrontends": "microfrontend.json"
 }

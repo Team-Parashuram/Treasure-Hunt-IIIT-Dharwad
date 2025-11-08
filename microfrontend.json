@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "treasure-hunt-main": {
+      "development": {
+        "local": 3000,
+        "fallback": "thunt.vercel.app"
+      }
+    },
+    "treasure-hunt-leaderboard": {
+      "development": {
+        "local": 5174,
+        "fallback": "thunt-leaderboard.vercel.app"
+      },
+      "routing": [
+        {
+          "group": "leaderboard",
+          "paths": [
+            "/leaderboard",
+            "/leaderboard/:path*"
+          ]
+        }
+      ]
+    }
+  }
+}
