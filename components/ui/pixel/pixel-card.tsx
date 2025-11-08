@@ -10,7 +10,7 @@ const PixelCard = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "pixel-borders border-4 p-6 bg-[#fffacd] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:bg-[#1a1a1a] dark:border-[#ff8c00] dark:shadow-[6px_6px_0px_0px_rgba(255,140,0,0.3)]",
+      "pixel-borders border-4 p-6 bg-[#fffacd] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:bg-[#1a1a1a] dark:border-[#ff8c00] dark:shadow-[8px_8px_0px_0px_rgba(255,140,0,0.4)] transition-all duration-200 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,140,0,0.6)] pixel-corners",
       className
     )}
     {...props}
@@ -37,7 +37,7 @@ const PixelCardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-base font-bold uppercase tracking-wider font-[family-name:var(--font-pixel)] leading-relaxed dark:text-[#ffd700]",
+      "text-base font-bold uppercase tracking-wider font-[family-name:var(--font-pixel)] leading-relaxed dark:text-[#ffd700] pixel-text-shadow",
       className
     )}
     {...props}

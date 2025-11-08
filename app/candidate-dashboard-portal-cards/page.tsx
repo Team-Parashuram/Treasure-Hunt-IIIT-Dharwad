@@ -19,84 +19,84 @@ export default function Dashboard() {
     <Link
       key="4"
       href="/candidate-dashboard-portal-cards/stack"
-      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all overflow-hidden"
+      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all overflow-hidden pixel-corners group"
     >
-      <Image src="/memes/jenga.jpg" alt="Jenga tower code meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders" />
+      <Image src="/memes/jenga.jpg" alt="Jenga tower code meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders border-b-4 border-black dark:border-[#ff8c00] group-hover:brightness-110 transition-all" />
       <div className="p-6 grow">
-        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font">
+        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font pixel-text-shadow">
           Our Tech
         </h2>
-        <p className="text-gray-800 dark:text-gray-300 text-sm">
+        <p className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed">
           Learn about the &apos;cutting-edge&apos; tools we use.
         </p>
       </div>
-      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00]">
-        <strong>Classification:</strong> Internal Use Only<br/>
-        <strong>Documentation:</strong> v0.1 (Draft)<br/>
-        <strong>Maintained by:</strong> &apos;The Interns&apos;
+      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00] bg-black/5 dark:bg-white/5">
+        <strong className="pixel-font">Classification:</strong> <span className="pixel-font">Internal Use Only</span><br/>
+        <strong className="pixel-font">Documentation:</strong> <span className="pixel-font">v0.1 (Draft)</span><br/>
+        <strong className="pixel-font">Maintained by:</strong> <span className="pixel-font">&apos;The Interns&apos;</span>
       </footer>
     </Link>,
 
     <Link
       key="5"
       href="/candidate-dashboard-portal-cards/policy"
-      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all overflow-hidden"
+      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all overflow-hidden pixel-corners group"
     >
-      <Image src="/memes/agree-condition.webp" alt="I read the terms and conditions" width={400} height={200} className="w-full h-48 object-cover pixel-borders"/>
+      <Image src="/memes/agree-condition.webp" alt="I read the terms and conditions" width={400} height={200} className="w-full h-48 object-cover pixel-borders border-b-4 border-black dark:border-[#ff8c00] group-hover:brightness-110 transition-all"/>
       <div className="p-6 grow">
-        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font">
+        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font pixel-text-shadow">
           Company Policy
         </h2>
-        <p className="text-gray-800 dark:text-gray-300 text-sm">
+        <p className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed">
           Mandatory reading. Seriously... *mandatory*.
         </p>
       </div>
-      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00]">
-        <strong>Last Revised:</strong> 2022<br/>
-        <strong>Compliance:</strong> <span className="text-[#ff0000]">Overdue</span><br/>
-        <strong>File Size:</strong> 2.1MB (PDF)
+      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00] bg-black/5 dark:bg-white/5">
+        <strong className="pixel-font">Last Revised:</strong> <span className="pixel-font">2022</span><br/>
+        <strong className="pixel-font">Compliance:</strong> <span className="text-[#ff0000] pixel-font">Overdue</span><br/>
+        <strong className="pixel-font">File Size:</strong> <span className="pixel-font">2.1MB (PDF)</span>
       </footer>
     </Link>,
 
     <Link
       key="6"
       href="/candidate-dashboard-portal-cards/internship"
-      className="flex flex-col h-full pixel-borders border-4 border-[#ff0000] bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] pixel-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all overflow-hidden"
+      className="flex flex-col h-full pixel-borders border-4 border-[#ff0000] bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] pixel-shadow-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all overflow-hidden pixel-corners group"
     >
-      <Image src="/memes/free-real-estate.webp" alt="It's free real estate meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders"/>
+      <Image src="/memes/free-real-estate.webp" alt="It's free real estate meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders border-b-4 border-[#ff0000] group-hover:brightness-110 transition-all"/>
       <div className="p-6 grow">
-        <h2 className="text-xl font-semibold text-[#ff0000] mb-2 pixel-font">
+        <h2 className="text-xl font-semibold text-[#ff0000] mb-2 pixel-font pixel-text-shadow">
           Unpaid Internship
         </h2>
-        <p className="text-gray-800 dark:text-gray-300 text-sm">
+        <p className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed">
           6 months, no pay. Great &apos;exposure&apos;. (Leads to /nalla).
         </p>
       </div>
-      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-[#ff0000]">
-        <strong>Applications:</strong> 1,337<br/>
-        <strong>Closes:</strong> Today<br/>
-        <strong>Pay:</strong> ₹0.00
+      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-[#ff0000] bg-black/5 dark:bg-white/5">
+        <strong className="pixel-font">Applications:</strong> <span className="pixel-font">1,337</span><br/>
+        <strong className="pixel-font">Closes:</strong> <span className="pixel-font">Today</span><br/>
+        <strong className="pixel-font">Pay:</strong> <span className="pixel-font">₹0.00</span>
       </footer>
     </Link>,
 
     <Link
       key="7"
       href="/candidate-dashboard-portal-cards/grievance"
-      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all overflow-hidden"
+      className="flex flex-col h-full pixel-borders border-4 border-black bg-[#fffacd] hover:bg-[#fff5b8] dark:bg-[#1a1a1a] dark:border-[#ff8c00] pixel-shadow-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all overflow-hidden pixel-corners group"
     >
-      <Image src="/memes/worthless.webp" alt="This is worthless meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders"/>
+      <Image src="/memes/worthless.webp" alt="This is worthless meme" width={400} height={200} className="w-full h-48 object-cover pixel-borders border-b-4 border-black dark:border-[#ff8c00] group-hover:brightness-110 transition-all"/>
       <div className="p-6 grow">
-        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font">
+        <h2 className="text-xl font-semibold text-black dark:text-[#ffd700] mb-2 pixel-font pixel-text-shadow">
           Grievance Form
         </h2>
-        <p className="text-gray-800 dark:text-gray-300 text-sm">
+        <p className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed">
           Why is this public? Seems like a mistake... or a test.
         </p>
       </div>
-      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00]">
-        <strong>Anonymous:</strong> Yes<br/>
-        <strong>Status:</strong> Unread (99+)<br/>
-        <strong>Response Time:</strong> N/A
+      <footer className="p-6 pt-2 text-xs text-gray-600 dark:text-gray-400 pixel-borders border-t-4 border-black dark:border-[#ff8c00] bg-black/5 dark:bg-white/5">
+        <strong className="pixel-font">Anonymous:</strong> <span className="pixel-font">Yes</span><br/>
+        <strong className="pixel-font">Status:</strong> <span className="pixel-font">Unread (99+)</span><br/>
+        <strong className="pixel-font">Response Time:</strong> <span className="pixel-font">N/A</span>
       </footer>
     </Link>,
 

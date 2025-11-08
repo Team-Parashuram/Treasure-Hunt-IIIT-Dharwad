@@ -17,6 +17,9 @@
   --color-pixel-dark-secondary: #ffd700;
   --color-pixel-dark-text: #ffffff;
   --color-pixel-dark-border: #ff8c00;
+  --color-pixel-dark-success: #00ff00;
+  --color-pixel-dark-danger: #ff0000;
+  --color-pixel-dark-warning: #ffff00;
 
   --color-pixel-light-bg: #f5f5dc;
   --color-pixel-light-surface: #fffacd;
@@ -24,11 +27,15 @@
   --color-pixel-light-secondary: #ff6b00;
   --color-pixel-light-text: #000000;
   --color-pixel-light-border: #000000;
+  --color-pixel-light-success: #00cc00;
+  --color-pixel-light-danger: #cc0000;
+  --color-pixel-light-warning: #cccc00;
 
   /* Pixel Shadows */
   --shadow-pixel: 4px 4px 0px 0px rgba(0,0,0,1);
   --shadow-pixel-sm: 2px 2px 0px 0px rgba(0,0,0,1);
   --shadow-pixel-lg: 6px 6px 0px 0px rgba(0,0,0,1);
+  --shadow-pixel-xl: 8px 8px 0px 0px rgba(0,0,0,1);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -178,5 +185,213 @@
 
   .pixel-font {
     font-family: var(--font-pixel);
+  }
+
+  /* Pixel Art Animations */
+  @keyframes pixel-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 4px 4px 0px 0px rgba(255, 140, 0, 0.8);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 0px 0px rgba(255, 140, 0, 1);
+    }
+  }
+
+  @keyframes pixel-glow {
+    0%, 100% {
+      box-shadow: 
+        0 0 0px rgba(255, 215, 0, 0.5),
+        4px 4px 0px 0px rgba(0, 0, 0, 1);
+    }
+    50% {
+      box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.8),
+        4px 4px 0px 0px rgba(0, 0, 0, 1);
+    }
+  }
+
+  @keyframes pixel-shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+  }
+
+  @keyframes pixel-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .pixel-pulse {
+    animation: pixel-pulse 2s ease-in-out infinite;
+  }
+
+  .pixel-glow {
+    animation: pixel-glow 2s ease-in-out infinite;
+  }
+
+  .pixel-shake {
+    animation: pixel-shake 0.5s ease-in-out;
+  }
+
+  .pixel-float {
+    animation: pixel-float 3s ease-in-out infinite;
+  }
+
+  /* Scanline effect for retro CRT look */
+  .pixel-scanlines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pixel-scanlines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0px,
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .pixel-scanlines::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 100%
+    );
+    animation: scanline 6s linear infinite;
+    pointer-events: none;
+    z-index: 11;
+  }
+
+  /* Pixel Grid Background */
+  .pixel-grid {
+    background-image: 
+      linear-gradient(rgba(255, 140, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 140, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Pixel Corners */
+  .pixel-corners {
+    position: relative;
+  }
+
+  .pixel-corners::before,
+  .pixel-corners::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ff8c00;
+  }
+
+  .pixel-corners::before {
+    top: -4px;
+    left: -4px;
+  }
+
+  .pixel-corners::after {
+    bottom: -4px;
+    right: -4px;
+  }
+
+  /* Retro Text Shadow */
+  .pixel-text-shadow {
+    text-shadow: 
+      2px 2px 0px rgba(0, 0, 0, 0.8),
+      4px 4px 0px rgba(255, 140, 0, 0.3);
+  }
+
+  /* 8-bit Button Press Effect */
+  .pixel-press:active {
+    transform: translate(4px, 4px);
+    box-shadow: none !important;
+  }
+
+  /* Pixel Perfect Borders */
+  .pixel-border-thick {
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 0;
+  }
+
+  .pixel-border-thin {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0;
+  }
+
+  /* Pixel Divider */
+  .pixel-divider {
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      #ff8c00 0px,
+      #ff8c00 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  /* Retro Glow Text */
+  .pixel-glow-text {
+    animation: text-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes text-glow {
+    0%, 100% {
+      text-shadow: 
+        0 0 2px rgba(255, 215, 0, 0.8),
+        0 0 4px rgba(255, 215, 0, 0.6),
+        2px 2px 0px rgba(0, 0, 0, 1);
+    }
+    50% {
+      text-shadow: 
+        0 0 4px rgba(255, 215, 0, 1),
+        0 0 8px rgba(255, 215, 0, 0.8),
+        2px 2px 0px rgba(0, 0, 0, 1);
+    }
+  }
+
+  /* Pixel Outline */
+  .pixel-outline {
+    position: relative;
+  }
+
+  .pixel-outline::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #ff8c00;
+    pointer-events: none;
   }
 }

@@ -16,7 +16,7 @@ export function GoogleLoginButton() {
       <PixelButton
         onClick={handleGoogleLogin}
         size="lg"
-        className="flex items-center gap-3"
+        className="flex items-center gap-3 pixel-glow hover:pixel-shake"
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24">
           <path
@@ -39,7 +39,7 @@ export function GoogleLoginButton() {
         </svg>
         Sign in with Google
       </PixelButton>
-      <p className="text-xs text-gray-400 italic pixel-font">
+      <p className="text-xs text-gray-400 italic pixel-font pixel-borders border-2 border-gray-600 px-3 py-2 bg-black/30">
         (You need to authenticate first to proceed)
       </p>
     </div>
