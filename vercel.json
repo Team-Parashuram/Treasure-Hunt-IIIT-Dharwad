@@ -11,5 +11,5 @@
       "schedule": "0 0 * * *"
     }
   ],
-  "microfrontends": "microfrontend.json"
+  "microfrontend": "microfrontend.json"
 }
