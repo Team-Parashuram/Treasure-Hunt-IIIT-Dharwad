@@ -12,13 +12,14 @@ export function GoogleLoginButton() {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4">
+    <div className="flex flex-col items-center space-y-6">
       <PixelButton
         onClick={handleGoogleLogin}
         size="lg"
-        className="flex items-center gap-3 pixel-glow hover:pixel-shake"
+        className="flex items-center gap-3 pixel-glow hover:pixel-shake pixel-press text-base md:text-lg"
+        aria-label="Sign in with Google to access the treasure hunt"
       >
-        <svg className="w-5 h-5" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" aria-hidden="true">
           <path
             fill="#4285F4"
             d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -37,10 +38,10 @@ export function GoogleLoginButton() {
           />
           <path fill="none" d="M1 1h22v22H1z" />
         </svg>
-        Sign in with Google
+        <span className="font-semibold">Sign in with Google</span>
       </PixelButton>
-      <p className="text-xs text-gray-400 italic pixel-font pixel-borders border-2 border-gray-600 px-3 py-2 bg-black/30">
-        (You need to authenticate first to proceed)
+      <p className="text-xs md:text-sm text-gray-400 italic pixel-font pixel-borders border-2 border-gray-600 px-4 py-3 bg-black/40 pixel-shadow max-w-md text-center">
+        🔐 You need to authenticate first to proceed with the treasure hunt
       </p>
     </div>
   );

@@ -11,119 +11,147 @@ export default function Home() {
 
   if (isPending) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-12 md:p-24 bg-[#000000] dark:bg-[#000000] text-white pixel-scanlines">
-        <PixelCard className="max-w-3xl w-full text-center pixel-glow">
-          <PixelCardHeader>
-            <PixelCardTitle className="text-2xl md:text-4xl text-[#ff0000] pixel-glow-text">
-              Kya Naukri Milegi Tumhe?
-            </PixelCardTitle>
-          </PixelCardHeader>
-          <PixelCardContent>
-            <p className="text-xl md:text-2xl text-[#ffd700] font-bold mb-4 pixel-font">
-              The Ultimate Job Hunt
-            </p>
-            <div className="mt-8 space-y-3">
-              <p className="text-lg md:text-xl text-gray-300 animate-bounce pixel-font">
-                🔍 Checking your credentials...
-              </p>
-              <p className="text-md text-gray-400">
-                HR is reviewing your profile...
-              </p>
-              <div className="flex justify-center items-center space-x-3 mt-4">
-                <div className="w-4 h-4 bg-[#ff0000] pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                <div className="w-4 h-4 bg-[#ffd700] pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                <div className="w-4 h-4 bg-[#00ff00] pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '300ms' }}></div>
+      <main className="flex min-h-screen flex-col items-center justify-center p-6 md:p-12 lg:p-24 bg-[#000000] dark:bg-[#000000] text-white pixel-scanlines">
+        <section className="max-w-4xl w-full">
+          <PixelCard className="w-full text-center pixel-glow">
+            <PixelCardHeader className="pb-8">
+              <PixelCardTitle className="text-3xl md:text-4xl lg:text-5xl text-pixel-dark-danger pixel-glow-text leading-tight">
+                KYA NAUKRI MILEGI TUMHE?
+              </PixelCardTitle>
+            </PixelCardHeader>
+            <PixelCardContent className="space-y-6">
+              <h2 className="text-xl md:text-2xl lg:text-3xl text-pixel-dark-secondary font-bold pixel-font">
+                The Ultimate Job Hunt
+              </h2>
+              <div className="mt-8 space-y-4 py-8">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-300 animate-bounce pixel-font">
+                  🔍 Checking your credentials...
+                </p>
+                <p className="text-base md:text-lg text-gray-400 pixel-font">
+                  HR is reviewing your profile...
+                </p>
+                <div className="flex justify-center items-center space-x-4 mt-8 pt-4">
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pixel-dark-danger pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pixel-dark-secondary pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pixel-dark-success pixel-borders pixel-shadow animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                </div>
               </div>
-            </div>
-          </PixelCardContent>
-        </PixelCard>
+            </PixelCardContent>
+          </PixelCard>
+        </section>
       </main>
     );
   }
 
   if (!session) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-12 md:p-24 bg-[#000000] dark:bg-[#000000] pixel-grid pixel-scanlines">
-        <PixelCard className="max-w-2xl w-full text-center pixel-pulse">
-          <PixelCardContent className="space-y-6">
-            <Image
-              src="/memes/This-Is-Fine-Dog-Fire-Meme-Sticker.webp"
-              alt="This is fine dog"
-              width={300}
-              height={170}
-              className="mx-auto pixel-borders pixel-shadow-lg"
-              priority 
-            />
+      <main className="flex min-h-screen flex-col items-center justify-center p-6 md:p-12 lg:p-24 bg-[#000000] dark:bg-[#000000] pixel-grid pixel-scanlines">
+        <section className="max-w-3xl w-full">
+          <PixelCard className="w-full text-center pixel-pulse">
+            <PixelCardContent className="space-y-8 py-8">
+              <div className="mb-6">
+                <Image
+                  src="/memes/This-Is-Fine-Dog-Fire-Meme-Sticker.webp"
+                  alt="This is fine dog meme - Welcome to the chaos of job hunting"
+                  width={300}
+                  height={170}
+                  className="mx-auto pixel-borders pixel-shadow-lg"
+                  priority 
+                />
+              </div>
 
-            <PixelCardTitle className="text-2xl md:text-3xl text-[#ff0000] pixel-text-shadow">
-              Welcome to Kya tumhe Naukri Milegi?
-            </PixelCardTitle>
-            <p className="text-lg md:text-xl text-white pixel-font">
-              First, authenticate yourself to proceed...
-            </p>
+              <header>
+                <PixelCardTitle className="text-2xl md:text-3xl lg:text-4xl text-pixel-dark-danger pixel-text-shadow mb-6">
+                  Welcome to Kya Tumhe Naukri Milegi?
+                </PixelCardTitle>
+                <p className="text-lg md:text-xl lg:text-2xl text-white pixel-font leading-relaxed px-4">
+                  First, authenticate yourself to proceed...
+                </p>
+              </header>
 
-            <div className="pixel-divider my-6"></div>
+              <div className="pixel-divider my-8"></div>
 
-            <GoogleLoginButton />
-          </PixelCardContent>
-        </PixelCard>
+              <div className="py-4">
+                <GoogleLoginButton />
+              </div>
+
+              <p className="text-sm md:text-base text-gray-400 italic pt-4">
+                🎮 Ready to prove you deserve the job?
+              </p>
+            </PixelCardContent>
+          </PixelCard>
+        </section>
       </main>
     );
   }
 
   return (
-<>
-    <main className="flex min-h-screen flex-col items-center justify-center p-12 md:p-24 bg-[#000000] dark:bg-[#000000] pixel-grid pixel-scanlines">
-      <PixelCard className="max-w-2xl w-full text-center pixel-glow">
-        <PixelCardContent className="space-y-6">
-          <Image
-            src="/memes/This-Is-Fine-Dog-Fire-Meme-Sticker.webp"
-            alt="This is fine dog"
-            width={300}
-            height={170}
-            className="mx-auto pixel-borders pixel-shadow-lg pixel-float"
-            priority 
-          />
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 md:p-12 lg:p-24 bg-[#000000] dark:bg-[#000000] pixel-grid pixel-scanlines">
+      <section className="max-w-3xl w-full">
+        <PixelCard className="w-full text-center pixel-glow">
+          <PixelCardContent className="space-y-8 py-8">
+            <div className="mb-6">
+              <Image
+                src="/memes/This-Is-Fine-Dog-Fire-Meme-Sticker.webp"
+                alt="This is fine dog meme - Everything is fine, or is it?"
+                width={300}
+                height={170}
+                className="mx-auto pixel-borders pixel-shadow-lg pixel-float"
+                priority 
+              />
+            </div>
 
-          <PixelCardTitle className="text-2xl md:text-3xl text-[#ff0000] pixel-text-shadow">
-            Welcome to Kya tumhe Naukri Milegi?
-          </PixelCardTitle>
-          <p className="text-lg md:text-xl text-white pixel-font">
-            HR has closed the gate for you.
-          </p>
-          <p className="text-base md:text-lg text-[#ffd700] pixel-font">
-            You have to become a hacker to bypass the gate and get naukri...
-          </p>
+            <header className="space-y-6">
+              <PixelCardTitle className="text-2xl md:text-3xl lg:text-4xl text-pixel-dark-danger pixel-text-shadow leading-tight">
+                Welcome to Kya Tumhe Naukri Milegi?
+              </PixelCardTitle>
+              <div className="space-y-4 px-4">
+                <p className="text-lg md:text-xl lg:text-2xl text-white pixel-font leading-relaxed">
+                  HR has closed the gate for you.
+                </p>
+                <p className="text-base md:text-lg lg:text-xl text-pixel-dark-secondary pixel-font leading-relaxed">
+                  You have to become a hacker to bypass the gate and get naukri...
+                </p>
+              </div>
+            </header>
 
-          <div className="pixel-divider my-6"></div>
+            <div className="pixel-divider my-8"></div>
 
-          <Image 
-            src="/memes/Mai-Expert-Hu-popular-indian-meme-templates-300x169.webp" 
-            alt="Mai Expert Hu Meme"
-            width={300}
-            height={169}
-            className="mx-auto pixel-borders"
-          />
-          <div
-            style={{ display: 'none' }}
-            dangerouslySetInnerHTML={{
-              __html: `
-              <p className='hidden'> HR told me to disable this, but they don't check the source code.
-              Use this for testing.
-              U: haha_tujhko_kya_naukri_milegi
-              P: naukri_krun_chahiye_tere_ko_nalla_mar_na
-              </p>
+            <div className="my-6">
+              <Image 
+                src="/memes/Mai-Expert-Hu-popular-indian-meme-templates-300x169.webp" 
+                alt="Mai Expert Hu meme - Showing confidence in hacking skills"
+                width={300}
+                height={169}
+                className="mx-auto pixel-borders pixel-shadow"
+              />
+            </div>
+
+            <div
+              style={{ display: 'none' }}
+              dangerouslySetInnerHTML={{
+                __html: `
+                <!-- HR told me to disable this, but they don't check the source code.
+                Use this for testing.
+                U: haha_tujhko_kya_naukri_milegi
+                P: naukri_krun_chahiye_tere_ko_nalla_mar_na
+                -->
                 `,
-            }}
-          />
+              }}
+            />
 
-          <LoginButton />
-          <p className="text-sm text-gray-400 pt-8 animate-pulse">
-            (Psst... real hackers... check something to get ahead!)
-          </p>
-        </PixelCardContent>
-      </PixelCard>
+            <div className="pt-6">
+              <LoginButton />
+            </div>
+
+            <footer className="pt-8">
+              <p className="text-xs md:text-sm text-gray-400 animate-pulse pixel-font">
+                (Psst... real hackers check the source code! 🕵️‍♂️)
+              </p>
+            </footer>
+          </PixelCardContent>
+        </PixelCard>
+      </section>
     </main>
-    </>
   );
 }
