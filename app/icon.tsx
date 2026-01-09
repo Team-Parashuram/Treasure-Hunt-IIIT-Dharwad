@@ -2,8 +2,8 @@ import { ImageResponse } from 'next/og'
  
 // Image metadata
 export const size = {
-  width: 32,
-  height: 32,
+  width: 192,
+  height: 192,
 }
 export const contentType = 'image/png'
  
@@ -14,19 +14,44 @@ export default function Icon() {
       // ImageResponse JSX element
       <div
         style={{
-          fontSize: 24,
-          background: '#000',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#ff8c00',
-          fontFamily: 'monospace',
-          fontWeight: 'bold',
+          background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)',
+          border: '8px solid #ff8c00',
         }}
       >
-        💼
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '8px',
+          }}
+        >
+          <div
+            style={{
+              fontSize: 64,
+              color: '#ff8c00',
+              textShadow: '2px 2px 0px #000',
+            }}
+          >
+            💼
+          </div>
+          <div
+            style={{
+              fontSize: 20,
+              color: '#ffd700',
+              fontWeight: 'bold',
+              textShadow: '1px 1px 0px #000',
+              letterSpacing: '2px',
+            }}
+          >
+            NAUKRI?
+          </div>
+        </div>
       </div>
     ),
     // ImageResponse options
